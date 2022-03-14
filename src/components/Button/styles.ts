@@ -10,7 +10,6 @@ export const Container = styled('button', {
 
   border: '2px solid',
   borderColor: '$$borderColor',
-  borderRadius: '$sm',
   background: '$$background',
 
   color: '$$color',
@@ -32,6 +31,27 @@ export const Container = styled('button', {
         background: '#29292E',
         color: '$error',
       },
+    },
+    radius: {
+      default: {
+        borderRadius: '$sm',
+      },
+      pill: {
+        borderRadius: '$full',
+      }
     }
-  }
+  },
+
+  defaultVariants: {
+    variant: 'primary',
+    radius: 'default',
+  },
+
+  compoundVariants: [{
+    variant: 'primary',
+    radius: 'pill',
+    css: {
+      boxShadow: `0px 0px 0 2px $colors$error`,
+    }
+  }]
 })

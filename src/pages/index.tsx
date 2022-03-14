@@ -36,7 +36,7 @@ export default function Home() {
       </Button>
 
       <Button
-        variant="primary"
+        variant="danger"
         onClick={() => handleChangeTheme("rocketseat_dark")}
       >
         Rocketseat Dark
